@@ -10,7 +10,7 @@ class FilerVideoPlugin(CMSPluginBase):
     name = _("Video (Filer)")
     form = VideoForm
     
-    render_template = "cms/plugins/video.html"
+    render_template = "cmsplugin_filer_video/video.html"
     
     general_fields = [
         ('movie', 'movie_url'),

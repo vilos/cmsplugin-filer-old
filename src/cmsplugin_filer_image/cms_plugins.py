@@ -16,7 +16,7 @@ class FilerImagePlugin(CMSPluginBase):
     admin_preview = False
     fieldsets = (
         (None, {
-            'fields': ('caption', 'image', 'image_url', 'alt_text',
+            'fields': ('caption', 'image', 'image_url', 'alt_text', 'css_class',
                        'thumbnail_option',)
         }),
         ('advanced thumbnail option', {

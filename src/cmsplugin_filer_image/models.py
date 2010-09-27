@@ -32,6 +32,7 @@ class FilerImage(CMSPlugin):
     page_link = models.ForeignKey(Page, verbose_name=_("page"), null=True, blank=True, 
                                   help_text=_("if present image will be clickable"))
     description = models.TextField(_("description"), blank=True, null=True)
+    css_class = models.CharField(null=True, blank=True, max_length=255)
     
     def clean(self):
         from django.core.exceptions import ValidationError

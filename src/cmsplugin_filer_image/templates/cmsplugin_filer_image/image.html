@@ -1,2 +1,2 @@
 {% load thumbnail filermedia %}
-{% if link %}<a href="{{ link }}">{% endif %}<img{% if object.float %} class="{{ object.float }}"{% endif %} alt="{% if object.alt %}{{ object.alt }}{% endif %}" src="{{ thumbnail.url }}" />{% if link %}</a>{% endif %}
+{% if link %}<a href="{{ link }}">{% endif %}<img{% if object.css_class or object.float %} class="{{ object.css_class }}{% if object.float %} {{ object.float }}{% endif %}"{% endif %} alt="{% if object.alt %}{{ object.alt }}{% endif %}" src="{{ thumbnail.url }}" />{% if link %}</a>{% endif %}

@@ -12,6 +12,7 @@ class FilerVideo(CMSPlugin):
     movie = FilerFileField(verbose_name=_('movie file'), help_text=_('use .flv file or h264 encoded video file'), blank=True, null=True)
     movie_url = models.CharField(_('movie url'), max_length=255, help_text=_('vimeo or youtube video url. Example: http://www.youtube.com/watch?v=YFa59lK-kpo'), blank=True, null=True)
     image = FilerImageField(verbose_name=_('image'), help_text=_('preview image file'), null=True, blank=True, related_name='filer_video_image')
+    caption = models.CharField(null=True, blank=True, max_length=255)
     
     width = models.PositiveSmallIntegerField(_('width'))
     height = models.PositiveSmallIntegerField(_('height'))

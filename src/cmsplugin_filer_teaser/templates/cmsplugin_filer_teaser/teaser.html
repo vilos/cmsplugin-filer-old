@@ -6,7 +6,7 @@
 		{% if object.image_url %}
             <img alt="{% if object.alt %}{{ object.alt }}{% endif %}" src="{{ object.image_url }}"{% if object.width or object.height %} style="{% if object.width %}width:{{ object.width }}px;{% endif %}{% if object.height %}height:{{ object.height }}px;{% endif %}"{% endif %} />
         {% else %}                  
-            <img alt="{% if object.alt %}{{ object.alt }}{% endif %}" src="{% thumbnail object.image image_size crop,upscale %}" />
+            <img alt="{% if object.alt %}{{ object.alt }}{% endif %}" src="{% thumbnail object.image image_size crop %}" />
         {% endif %}
 	{% if link %}</a>{% endif %}
 {% endif %}
